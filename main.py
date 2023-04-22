@@ -90,7 +90,7 @@ def read_training_images(directory, label_regex):
             image_ = cv2.imread(os.path.join(directory, filename))
             images_l.append((image_, label))
         else:
-            print("incorrect filename, probably read an incorrect image that was not in the training set")
+            print("incorrect filename , probably read an incorrect image that was not in the training set")
     return images_l
 
 
