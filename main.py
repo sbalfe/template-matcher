@@ -118,6 +118,8 @@ def template_match(test_image, training_images_p, threshold):
     filtered = non_maximum_suppression(matches, threshold)
     display(test_image, filtered)
 
+    return 0, 0, 0
+
 
 if __name__ == '__main__':
     regex = r'\d{3}-(\w+(?:-\w+)*)\.png'
@@ -134,4 +136,4 @@ if __name__ == '__main__':
     test_images = read_test_images(test_images_rotations_dir)
 
     for image_t in test_images:
-        template_match(image_t, training_images, 0.80)
+        acc, tpr, fpr = template_match(image_t, training_images, 0.80)
