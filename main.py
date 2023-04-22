@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 import re
 
+
 def create_pyramid(image_p, level_n, orientation_n):
     # Create a Gaussian pyramid
     pyramid = []
