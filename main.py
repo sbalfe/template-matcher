@@ -63,7 +63,7 @@ def template_matcher(main_image, images):
     return matches
 
 
-def non_maxima_suppression(current_matches, threshold):
+def non_maximum_suppression(current_matches, threshold):
     filtered_matches_l = []
     for i, match in enumerate(current_matches):
         # Apply threshold
@@ -115,7 +115,7 @@ def display(image, filtered_matches):
 
 def template_match(test_image, training_images_p, threshold):
     matches = template_matcher(test_image, training_images_p)
-    filtered = non_maxima_suppression(matches, threshold)
+    filtered = non_maximum_suppression(matches, threshold)
     display(test_image, filtered)
 
 
